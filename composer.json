@@ -1,0 +1,39 @@
+{
+  "name" : "stinger-soft/symfony-wincache",
+  "type" : "library",
+  "description" : "Adds wincache to symfony's PSR16 cache implementation",
+  "keywords" : [
+    "Search"
+  ],
+  "homepage" : "http://www.stinger-soft.net",
+  "authors" : [{
+    "name" : "Florian Meyer",
+    "email" : "florian.meyer@stinger-soft.net",
+    "role" : "Developer"
+  }
+  ],
+  "autoload" : {
+    "psr-4" : {
+      "StingerSoft\\SymfonyWincache\\" : ""
+    },
+    "exclude-from-classmap" : [
+      "/Tests/"
+    ]
+  },
+  "license" : "Apache-2.0",
+  "require" : {
+    "php" : ">=7.2",
+    "ext-wincache": "*",
+    "symfony/cache" : "^4.0"
+  },
+  "require-dev" : {
+    "phpunit/phpunit" : "~7.5.6",
+    "php-coveralls/php-coveralls" : "~2.1.0",
+    "cache/integration-tests": "dev-master"
+  },
+  "extra" : {
+    "branch-alias" : {
+      "dev-master" : "1.0.x-dev"
+    }
+  }
+}
