@@ -12,3 +12,19 @@
     </call>
 </service>
 ````
+
+````
+  cache.adapter.wincache:
+    class: StingerSoft\SymfonyWincache\Adapter\WincacheAdapter
+    abstract: true
+    autowire: false
+    autoconfigure: false
+    tags:
+      - { name: cache.pool, clearer: cache.default_clearer }
+      - { name: monolog.logger, channel: cache}
+    arguments: [ null, 0, null]
+    calls:
+      - method: setLogger
+        arguments:
+          - '@logger'
+````
