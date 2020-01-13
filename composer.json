@@ -23,7 +23,6 @@
   "license" : "Apache-2.0",
   "require" : {
     "php" : ">=7.2",
-    "ext-wincache": "*",
     "symfony/cache" : "^4.0"
   },
   "require-dev" : {
